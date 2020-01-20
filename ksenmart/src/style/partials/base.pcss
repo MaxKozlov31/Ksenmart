@@ -1,0 +1,122 @@
+/* Базовые стили */
+
+
+strong,
+b {
+    font-weight: bold;
+
+    i,
+    em {
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+
+em,
+i {
+    font-style: italic;
+
+    strong,
+    b {
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+
+
+h1 {
+    margin-top: 0;
+    font-size: 60px;
+    line-height: 77px;
+
+    @media (--desktop) {
+
+    }
+
+    @media (--tablet-lg) {
+
+    }
+
+    @media (--mobile) {
+
+    }
+}
+
+h2 {
+    margin-bottom: calc($gutter-step * 5.5);
+    font-size: 40px;
+    line-height: 52px;
+
+    @media (--desktop) {
+
+    }
+
+    @media (--tablet) {
+        margin-bottom: calc($gutter-step * 4);
+        font-size: 24px;
+    }
+
+    @media (--mobile) {
+
+    }
+}
+
+h3 {
+    margin-bottom: calc($gutter-step * 7);
+    font-size: 30px;
+    line-height: 39px;
+
+    @media (--desktop-lg) {
+        margin-bottom: calc($gutter-step * 6);
+    }
+
+    @media (--desktop) {
+
+    }
+
+    @media (--tablet) {
+        font-size: 24px;
+        margin-bottom: calc($gutter-step * 2.75);
+    }
+
+    @media (--mobile) {
+
+    }
+}
+
+h4 {
+    font-size: 23px;
+    line-height: 30px;
+} 
+
+h5 {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+
+hr {
+    background: none;
+    border: none;
+    border-bottom: 1px solid $cl-grey;
+    display: block;
+    position: relative;
+    height: 1px;
+    margin: calc($gutter / 2) 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+ul, ol {
+    li {
+        list-style: none outside;
+    }
+}
+
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}

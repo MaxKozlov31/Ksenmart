@@ -1,0 +1,84 @@
+/* Science
+================= */
+
+.scientific-activity {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    padding-top: 96px;
+    background: #fff;
+
+    &_item {
+        &_title {
+            padding-bottom: 17px;
+            font-size: 39px;
+            line-height: 110%;
+            font-weight: normal;
+            color: #232322;
+        }
+
+        &_text {
+            font-size: 20px;
+            line-height: 120%;
+            color: #7C7C7C;
+            margin-bottom: 56px;
+        }
+
+        &_directions {
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        &_contracts {
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            overflow-y: hidden;
+            height: 200px;
+            width: 100%;
+
+        }
+
+        &_partners{
+            
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: hidden;
+
+            &_slider {
+                
+                display: flex;
+                width: 1500px;
+                margin-bottom: 56px;
+
+                & .partners_slider_item{
+                    height: 73px;
+
+
+                    width: auto;
+                    margin-right: 73px;
+
+                    & .bp {
+                        padding-top: 12.5px;
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+
+
+
+.contr {
+    width: 223px;
+    cursor: pointer;
+
+    margin-right:30px;
+    margin-bottom: -200px;
+
+    transition-duration: .6s;
+}
+

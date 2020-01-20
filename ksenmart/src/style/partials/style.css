@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap');
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color:  #fff;
+    font-size: 10px;
+    line-height: 17px;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+p {
+    margin: 0;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    /* fill: $cl-blue; */
+    text-decoration: none;
+    
+
+    &:hover {
+        
+        text-decoration: none;
+    }
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 60px;
+    line-height: 77px;
+
+    @media (--desktop) {
+
+    }
+
+    @media (--tablet-lg) {
+
+    }
+
+    @media (--mobile) {
+
+    }
+}
+
+h2 {
+    margin-bottom: calc($gutter-step * 5.5);
+    font-size: 40px;
+    line-height: 52px;
+
+    @media (--desktop) {
+
+    }
+
+    @media (--tablet) {
+        margin-bottom: calc($gutter-step * 4);
+        font-size: 24px;
+    }
+
+    @media (--mobile) {
+
+    }
+}
+
+h3 {
+    margin-bottom: calc($gutter-step * 7);
+    font-size: 30px;
+    line-height: 39px;
+
+    @media (--desktop-lg) {
+        margin-bottom: calc($gutter-step * 6);
+    }
+
+    @media (--desktop) {
+
+    }
+
+    @media (--tablet) {
+        font-size: 24px;
+        margin-bottom: calc($gutter-step * 2.75);
+    }
+
+    @media (--mobile) {
+
+    }
+}
+
+h4 {
+    font-size: 23px;
+    line-height: 30px;
+} 
+
+h5 {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+ul, ol {
+    li {
+        list-style: none outside;
+    }
+}
+
+a {
+    color: #333333;
+}

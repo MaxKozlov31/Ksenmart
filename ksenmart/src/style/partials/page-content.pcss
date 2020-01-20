@@ -1,0 +1,129 @@
+.pop-category {
+    width: 100%;
+    position: relative;
+    margin-bottom: 7.5rem;
+
+    &__title {
+        
+    }
+
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4.2rem;
+
+    
+
+        
+        @media (--tablet-lg) {
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 4px;
+        
+                &-track {
+                    background: #fff;
+                }
+        
+                &-thumb {
+                    background: #B0E3FF;; 
+                    border-radius: 10px;
+        
+                    &:hover {
+                        background: #99dbff;
+                    }
+                }     
+            }
+        }
+
+        &-items{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            @media (--tablet-lg) {
+                margin-right: 4rem;
+            }
+
+            @media (--mobile-sm) {
+                margin-right: 4rem;
+            }
+
+
+
+            &-circle {
+                width: 15.2rem;
+                height: 15.2rem;
+                border-radius: 50%;
+                background: #F3F3F3;
+                outline: none;
+                cursor: pointer;
+
+                transition: 1s;
+    
+
+                @media (--tablet-lg) {
+                    width: 12rem;
+                    height: 12rem;
+                    margin-bottom: 1.3rem;
+
+                }
+
+                @media (--mobile-sm) {
+                    width: 9.4rem;
+                    height: 9.4rem;
+                    margin-bottom: 1.3rem;
+                }
+            }
+
+            &__subtitle {
+                font-weight: bold;
+                font-size: 1.5rem;
+                line-height: 1.9rem;
+                color: #333333;
+
+                @media (--mobile-sm) {
+                    font-size: 1.3rem;
+                    line-height: 1.7rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+.intro-title {
+    font-size: 3rem;
+    line-height: 3.9rem;
+    text-align: center;
+    font-weight: 400;
+
+    color: #333333;
+
+    margin-bottom: 5.5rem;
+
+    @media (--mobile-sm) {
+        font-size: 2.3rem;
+        line-height: 3rem;
+        margin-bottom: 2.4rem;
+    }
+    
+}
+
+
+
+.scale {
+    display: inline-block;
+    overflow: visible;
+    position: relative;
+}
+
+.scale img {
+    transform: scale(.9);
+    transition: 1s;
+    bottom: -0.5rem;
+}
+
+/* .scale img:hover {
+    transform: scale(1.3);
+} */

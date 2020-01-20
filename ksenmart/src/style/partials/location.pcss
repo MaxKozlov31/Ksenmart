@@ -1,0 +1,146 @@
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+
+    background: rgba(0,0,0,.5);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+
+    &.show {
+        display: flex;
+    }
+    
+}
+
+.location {
+    position: relative;
+    width: 100%;
+
+
+    /* top: 10rem;
+    left: 9.5rem; */
+
+    margin: 9rem auto;
+
+    max-width: 113.5rem;
+    height: 63.2rem;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; 
+    background: #fff;
+
+    padding: 4.8rem 9.1rem 3.3rem 0;
+
+    transform: scale(0);
+    transition: transform .2s linear;
+
+
+    &-content {
+        padding-left:59rem;
+
+        &__text {
+            font-size: 1.3rem;
+            line-height: 130%;
+            color: #7C7C7C;
+        }
+    }
+
+    & a {
+        padding: 9px 0;
+
+        &:hover {
+            background: #4EB7F0;
+            width: 100%;
+            color: #fff;
+        }
+    }
+}
+
+.region {
+    width: 27.5rem;
+    position: absolute;
+    top: 4.8rem;
+    bottom: 3.3rem;
+
+    border-right: 1px solid #e5e5e5;
+    
+
+    &-head {
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 5.1rem;
+        padding-top: 0;
+    }
+
+}
+
+.city {
+    width: 27.5rem;
+    position: absolute;
+    top: 4.8rem;
+    bottom: 3.3rem;
+    left: 27.5rem;
+
+    border-right: 1px solid #e5e5e5;
+}
+
+
+.sidebar-scroll {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        
+
+        &-track {
+            background: #fff;
+        }
+
+        &-thumb {
+            background: #B0E3FF;; 
+            border-radius: 10px;
+
+            &:hover {
+                background: #99dbff;
+            }
+        }     
+    }
+}
+
+
+.region-list {
+    position: relative;
+    
+
+    &_indent {
+        padding-top: 3rem;
+    }
+    
+
+    & a {
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+        padding: 9px 0;
+        padding-left: 63px;
+
+        &:hover {
+            background: #4EB7F0;
+            color: #fff;
+        }
+    }
+}
+
+.letter {
+
+    position: absolute;
+    font-weight: bold;
+    left: 3.5rem;
+}
+

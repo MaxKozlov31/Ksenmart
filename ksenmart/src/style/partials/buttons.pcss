@@ -1,0 +1,231 @@
+/* Buttons
+================== */
+
+.btn {
+    height: 4.8rem;
+    position: relative;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    box-shadow: 0px .1rem .3rem rgba(0, 0, 0, 0.18);
+    
+    font-size: 1.3rem;
+    color: #fff;
+    cursor: pointer;    
+
+    transition: all .1s ease;
+
+    &_mini {
+        height: 4rem;
+    }
+
+    &_micro {
+        height: 2.8rem;
+    }
+
+    &_nano {
+        height: 1.9rem;
+    }
+
+    /* Градиент при наведении
+    ============================*/
+    &_gradient {
+        &> span{
+            
+            position: relative;
+            vertical-align: middle;
+
+            z-index: 1;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: .5rem;
+            border: none;
+            outline: none;
+            box-shadow: 0px .1rem .3rem rgba(0, 0, 0, 0.18);
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.0) 100%);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        &:hover:before {
+            opacity: 1;
+        }
+    }
+    /* ========================= */
+
+    &_AddToCart {
+        width: 20.5rem;
+        height: 4rem;
+        background: #FC7B54;
+    }
+
+    &_to-shopping {
+        width: 29.1rem;
+        background: #FC7B54;
+    
+        color: #FFFFFF;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.07rem;
+    
+        margin: 2.1rem 0 0 6.7rem;
+
+        @media (--mobile-sm) {
+            text-transform: inherit;
+            margin: 0 auto;
+        }
+    }
+
+    &_stock {
+        width: 22.1rem;
+        height: 4rem;
+        margin: 0;
+        text-transform: none;
+        letter-spacing: 0rem;
+    }
+}
+
+.header__catalog-btn {
+    position: relative;
+    width: 14.4rem;
+    background: #2B8BBF;
+    text-transform: uppercase;
+
+    margin-right: 1.4rem;
+
+    &_orange {
+        background: #FC7B54;
+        margin-left: 0;
+    }
+
+    @media (--desktop) {
+        width: 12rem;
+    }
+
+    @media (--tablet-lg) {
+        padding: 5px;
+        width: 7rem;
+        display: flex;
+        flex-direction: column;
+        text-transform: inherit;
+    }
+
+    @media   (--mobile-sm) {
+        display: none;
+    }
+}
+
+.burger {
+    display: inline-block;
+    width: 2rem;
+    height: .2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    
+    
+
+    position: relative;
+
+    
+    &:before,
+    &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+
+        background-color: #fff;
+        left: 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &:before {
+        top: -.6rem;
+    }
+
+    &:after{
+        bottom: -.6rem;
+    }
+
+    &_position {
+        left: -1.2rem;
+        top: -0.4rem;
+    }
+}
+
+.circle-btn {
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5rem;
+    background: #2D5A79;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    margin-left: 1.6rem;
+
+    &_light {
+        background: #F3F3F3;
+    }
+
+    &__person {
+        background-image: url("../img/person.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: inline-block;
+    }
+
+    &__liked {
+        @media   (--tablet-lg) {
+            display: none;   
+        }
+    }
+
+    &__basket {
+        
+    }
+}
+
+
+.btn_expend {
+    width: 268px;
+    background: linear-gradient(180deg, #F7F7F7 0%, #F0F0F0 100%);
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #7C7C7C;
+    text-transform: uppercase;
+
+    @media (--mobile-sm) {
+        display: none;
+    }
+}
+
+
+.modal__close {
+    position: absolute;
+    top: 2.2rem;
+    right: 2.2rem;
+    z-index: 1;
+    cursor: pointer;
+    
+    padding: 0;
+    background: none;
+    border: 0;
+
+    transition: transform .2s linear;
+
+    &:hover {
+
+        transform: translateY(-1px);
+    }
+}
