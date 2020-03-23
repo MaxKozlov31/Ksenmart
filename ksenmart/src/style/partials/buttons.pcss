@@ -1,5 +1,9 @@
 /* Buttons
 ================== */
+button {
+    cursor: pointer;
+    outline: none;
+}
 
 .btn {
     height: 4.8rem;
@@ -7,7 +11,7 @@
     border-radius: .5rem;
     border: none;
     outline: none;
-    box-shadow: 0px .1rem .3rem rgba(0, 0, 0, 0.18);
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.18);
     
     font-size: 1.3rem;
     color: #fff;
@@ -20,7 +24,22 @@
     }
 
     &_micro {
+        width: 19rem;
         height: 2.8rem;
+
+    }
+
+    &-accessories {
+        background: #fff;
+        color: #2B8BBF;
+        border: .1rem solid #dedede;
+        box-shadow: none;
+
+        margin-top: 2rem;
+
+        &:hover {
+            box-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.18);
+        }
     }
 
     &_nano {
@@ -64,6 +83,31 @@
         width: 20.5rem;
         height: 4rem;
         background: #FC7B54;
+
+        color: #fff;
+        font-size: 1.3rem;
+        line-height: 130%;
+    }
+
+    &-AddToCart {
+        width: 29rem;
+        height: 4rem;
+        background: #FC7B54;
+
+        color: #fff;
+        font-size: 1.3rem;
+        line-height: 130%;
+    }
+
+    &-like {
+        background: #FC7B54;
+        width: 4rem;
+        height: 4rem;
+
+        .fa-heart {
+            color: #fff;
+            font-size: 1.5rem;
+        }
     }
 
     &_to-shopping {
@@ -90,19 +134,87 @@
         text-transform: none;
         letter-spacing: 0rem;
     }
+
+    &-respond {
+        width: 19rem;
+        height: 4rem;
+        background: #4EB7F0;
+        color: #FFFFFF;
+    }
+
+    &-more-reviews {
+        width: 52.8rem;
+        height: 4.8rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        color: #7C7C7C;
+        background: linear-gradient(180deg, #F7F7F7 0%, #F0F0F0 100%);
+        margin-left: 20%;
+
+        &>span {
+            vertical-align: baseline;
+        }
+
+        
+    }
+
+    &-reviews-prompt {
+        background: #4EB7F0;
+        width: 14rem;
+        height: 4rem;
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        color: #fff;
+
+    }
+
+    &-reviews {
+        background: #4EB7F0;
+        height: 4rem;
+        width: 19rem;
+
+    }
+    
+
+    &-checkout {
+        width: 100%;
+        height: 4rem;
+        background: #FC7B54;
+    }
+
+
 }
 
 .header__catalog-btn {
     position: relative;
+    display: flex;
+    align-items: center;
     width: 14.4rem;
     background: #2B8BBF;
     text-transform: uppercase;
 
     margin-right: 1.4rem;
+    padding: 0 1.5rem;
 
     &_orange {
         background: #FC7B54;
         margin-left: 0;
+    }
+
+    &_active span {
+        height: 0;
+        transform: translateY(-.2rem);
+
+        &:before {
+            transform: rotate(-45deg);
+        }
+
+        &:after {
+            transform: rotate(45deg);
+        }
+        
     }
 
     @media (--desktop) {
@@ -123,42 +235,44 @@
 }
 
 .burger {
+    position: relative;
     display: inline-block;
     width: 2rem;
     height: .2rem;
     background-color: #fff;
     border-radius: 1rem;
     
-    
 
-    position: relative;
+    margin-right: 15.7%;
 
-    
     &:before,
     &:after {
+        display: block;
         content: "";
-        width: 100%;
-        height: 100%;
+        width: 2rem;
+        height: .2rem;
         border-radius: 1rem;
 
         background-color: #fff;
         left: 0;
         position: absolute;
         z-index: 1;
+        transition: .2s;
     }
 
     &:before {
-        top: -.6rem;
+        transform: translateY(.6rem);
     }
 
     &:after{
-        bottom: -.6rem;
+        transform: translateY(-.6rem);
     }
 
     &_position {
         left: -1.2rem;
         top: -0.4rem;
     }
+
 }
 
 .circle-btn {
@@ -228,4 +342,349 @@
 
         transform: translateY(-1px);
     }
+}
+
+.SOMEcategory-head__view {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #dedede;
+    width: 115px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+    background: #f3f3f3;
+    padding: 0px;
+
+    .btn-tbl {
+      
+        padding: 10px 18px;
+ 
+    }
+
+    .btn-tile {
+      
+        padding: 8px 18px;
+    }
+
+    .btn-list {
+     
+        padding: 10px 20px;
+    }
+
+    .brdr {
+        border-right: 1px solid #dedede;
+        width: 1px;
+        height: 40px;
+    }
+}
+
+.btn-tbl {
+    background: url(../img/svg/menu-tbl.svg) center no-repeat;
+ 
+    margin: auto;
+
+}
+
+.btn-tile {
+    background: url(../img/svg/menu-tile.svg) center no-repeat;
+ 
+    margin: auto;
+}
+
+.btn-list {
+    background: url(../img/svg/menu-list.svg) center no-repeat;
+
+    margin: auto;
+}
+
+/* Разворачивающаяся кнопка
+====================================== */
+
+.btn-choice {
+
+width: 25.5rem;
+
+}
+
+.btn-tab {
+    position: relative;
+    margin-bottom: 1px;
+    width: 100%;
+    color: #333;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #DEDEDE;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+
+    font-size: 1.3rem;
+    line-height: 130%;
+
+    &>input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+
+        &:checked ~ .btn-tab-content {
+            max-height: 100px;
+        }
+    }
+
+    &>label {
+        position: relative;
+        display: block;
+        padding: 0 0 0 1em;
+        background: #F0F0F0;
+        font-weight: bold;
+        line-height: 3;
+        cursor: pointer;
+
+        &::after {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            width: 3em;
+            height: 3em;
+            line-height: 3;
+            text-align: center;
+            -webkit-transition: all .35s;
+            -o-transition: all .35s;
+            transition: all .35s;
+        }
+    }
+
+    &-content {
+        max-height: 0;
+        overflow: hidden;
+        background: #fff;
+        -webkit-transition: max-height .35s;
+        -o-transition: max-height .35s;
+        transition: max-height .35s;
+
+        &>p {
+            padding: 1em;
+            transition: all .35s easy;
+            cursor: pointer;
+
+            &:hover {
+                background: #4EB7F0;
+                
+                &>a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+/* Icon */
+
+.btn-tab input[type=checkbox] + label::after {
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+    content: "\f107";
+}
+
+.btn-tab input[type=checkbox]:checked + label::after {
+transform: rotate(180deg);
+}
+
+  /* /Разворачивающаяся кнопка
+====================================== */
+
+.categories-more {
+    display: flex;
+    position: relative;
+    height: 2.8rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0 3.9rem 0 3.6rem;
+    background: #fff;
+
+    &:after {
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        content: "\f061";
+        font-weight: 600;
+        position: absolute;
+        right: 1.2rem;
+        color: #B5B5B5;
+    }
+}
+
+/* Кнопка развёрт    + -
+==================================== */
+
+.collapse-btn {
+    display: block;
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    background: transparent;
+}
+
+.collapse-btn span,
+.collapse-btn span::before
+{
+  position: absolute;
+  height: .2rem; margin-top: -.1rem;
+  width: 1.6rem; margin-left: -.8rem;
+  background-color: #B5B5B5;
+  top: 50%;
+  left: 50%;
+  transition: .5s;
+  
+}
+
+.collapse-btn span::before {
+  content: '';
+  display: block;
+  
+} 
+
+.collapse-btn__active span {
+  transform: rotate(90deg);
+}
+.collapse-btn__active span:before {
+  transform: rotate(-270deg);
+}
+
+/* / Кнопка развёрт    + -
+==================================== */
+
+
+
+/* Звёздный рейтинг  
+==================================== */
+
+.star {
+    display: flex;
+}
+.star-item {
+    width: 2.6rem;
+    height: 2.6rem;
+
+    border: .25rem solid #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background-image: url(../img/star-on.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+
+.star-item.active ~ .star-item {
+    background-image: url(../img/star-off.svg);
+}
+.star:hover .star-item {
+    background-image: url(../img/star-on.svg);
+}
+.star-item:hover ~ .star-item {
+    background-image: url(../img/star-off.svg);
+}
+
+/* / звёздный рейтинг  
+==================================== */
+
+
+
+
+.knopka {
+
+    &>button {
+        border: 1px solid #DEDEDE;
+        width: 44px;
+        height: 38px;
+
+    }
+
+    .kn1 {
+        background: url(../img/svg/menu-tbl.svg) center no-repeat;
+
+        &>span {
+            
+        }
+    }
+
+    .kn2 {
+        background: url(../img/svg/menu-tile.svg) center no-repeat;
+    }
+
+    .kn3 {
+        background: url(../img/svg/menu-list.svg) center no-repeat;
+    }
+}
+
+
+
+
+
+
+/* ---------------------- */
+
+.sub,
+.add {
+   cursor: pointer;
+  outline: none;
+}
+
+.sub:hover {
+  background: #d3d3d3;
+}
+
+.add:hover {
+  background: #d3d3d3;
+}
+
+
+.sub{
+  margin-right: -4px;
+  width:25px; 
+  height:28px;
+  margin-right: -4px; 
+  border: none; 
+  background: #dedede;
+  border-radius: 5px 0 0 5px;
+}
+
+.add{
+  width:25px; 
+  height:28px; 
+  margin-left: -4px; 
+  border: none; 
+  background: #dedede;
+  border-radius: 0 5px 5px 0;
+  margin-left: -4px;
+}
+
+
+input#number {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    color: #2D5A79;
+    margin: 0;
+    width: 4rem;
+    height: 2.5rem;
+    border: none;
+    text-align: center;
+    background: #fff;
+    display: inline-block;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    vertical-align: inherit;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn-quantity {
+  background: #dedede;
+  width: 9rem;
+  height: 2.8rem;
+  border-radius: .5rem;
 }

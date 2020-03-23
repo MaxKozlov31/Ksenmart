@@ -114,6 +114,8 @@
 .slick-list,
 .slick-track {
     height: 100%;
+
+    padding: 1rem 0;
 }
 
 .arrow {
@@ -130,6 +132,14 @@
     box-shadow: 0 0.1rem .3rem rgba(0, 0, 0, 0.18);
 
     transition: .1s linear;
+
+    &_product {
+        width: 23px;
+        height: 23px;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+    }
 }
 
 .prev {
@@ -139,13 +149,31 @@
     &:hover {
         box-shadow: 0 0 0.5rem rgba(0, 0, 0, .3);
     }
+
+    &_up {
+        background: url(../img/arrow-up.svg) center no-repeat;
+        
+        transform: translate(0, 0);
+        top: -25px;
+        left: 43px;
+        
+    }
 }
+
+
 .next {
     background: url(../img/right-arrow.svg) center no-repeat;
     right: -7.8rem;
 
     &:hover {
         box-shadow: 0 0 0.5rem rgba(0, 0, 0, .3);
+    }
+
+    &_down {
+        background: url(../img/arrow-down.svg) center no-repeat;
+        left: 43px;
+        top: auto;
+        margin-top: 15px;
     }
 }
 

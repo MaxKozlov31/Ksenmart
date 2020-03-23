@@ -49,7 +49,6 @@
 
     
     &__region {
-        color: #4EB7F0;
         margin-left: 1.9rem;
         line-height: 1.9rem;
         font-size: 1.5rem;
@@ -64,13 +63,6 @@
 
     }
 
-    .reg {
-        border-bottom: 0.1rem dotted #4EB7F0;
-
-        @media  (--tablet-lg) {
-            display: none;
-        }
-    }
 
     &__catalog-btn {
         
@@ -172,6 +164,15 @@
         left: 0;
         width: 100%;
         z-index: 999;
+    }
+}
+
+.reg {
+    border-bottom: 0.1rem dotted #4EB7F0;
+    color: #4EB7F0;
+
+    @media  (--tablet-lg) {
+        display: none;
     }
 }
 

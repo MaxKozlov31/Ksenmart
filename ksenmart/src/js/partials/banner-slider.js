@@ -9,10 +9,13 @@ $(document).ready(function(){
             breakpoint: 1024,
             settings: {
           
-              dots: true,
+              dots: false,
               // prevArrow: false,
               // nextArrow: false,
-              arrows: false
+              arrows: false,
+              infinite: true,
+              autoplay: true,
+              autoplaySpeed: 3000,
               
             }
         },
@@ -26,7 +29,7 @@ $(document).ready(function(){
         {
             breakpoint: 320,
             settings: {
-              dots: true,
+              dots: false,
               prevArrow: false,
               nextArrow: false,
               arrows: false        

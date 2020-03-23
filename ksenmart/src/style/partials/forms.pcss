@@ -67,16 +67,20 @@ input[type="week"],
 input:not([type]),
 textarea,
 select {
-    border: 1px solid $cl-form-grey;
-    border-width: 1px;
-    border-radius: 50px;
+    border: 1px solid #DEDEDE;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
     display: block;
     width: 100%;
+    
     /* margin: 0 0 calc($gutter-step * 2.5) 0; */
-    padding: 0;
+    padding: 1.5rem 2rem;
     vertical-align: top;
     outline: none;
     transition: all $time ease;
+
+    font-size: 1.5rem;
+    line-height: 1.9rem;
 
     @include field-style(
         $cl-white,
@@ -97,126 +101,39 @@ select {
         $cl-global,
         $cl-dk-grey
     );
-    @include field-size(
-        $field-height,
-        calc($gutter-step * 2),
-        calc($gutter-step * 1.5),
-        16px
-    );
 
-    @include placeholder {
-        color: $cl-grey;
-    }
 
 }
 
-/* Чекбоксы */
 
-input[type="checkbox"],
-input[type="radio"] {
-    position: absolute;
-    clip: rect(0,0,0,0);
+.field {
+    width: 48%;
 
-    & + label {
-        position: relative;
+    &>label {
         display: block;
-        margin-bottom: calc($gutter-step * 0.6);
-        padding-left: calc(12px + $gutter-step * 1.5);
-        text-align: left;
-        line-height: 24px;
-        cursor: pointer;
+        margin-bottom: 1rem;
+    }
 
-        @media (--desktop-lg) {
-            font-size: 13px;
-            /* В макете 14px, но оно ВООБЩЕ НИКАК не влезало
-            Даже пробовал играться с размером колонок 
-            Если оставлять 14 и менять ширину, визуально становится заметно,
-            что чекбоксы не по центру*/
-        }
-
-
-        &:before,
-        &:after {
-            content: '';
-            box-sizing: border-box;
-            position: absolute;
-            display: block;
-            transition: all $time ease;
-            
-        }
-
-        &:before {
-            content: '';
-            top: 4px;
-            left: 0;
-            border: 1px solid $cl-form-grey;
-        }
-
-        &:after {
-            transform: scale(0);
+    &-name {
+        &>label span {
+            color: red;
         }
     }
 
-    &:disabled {
-        & + label {
-            color: $cl-grey;
-            cursor: default;
+    &-virtuest {
+        width: 100%;
 
-            &:before {
-                border-color: $cl-grey;
-            }
-        }
+        margin-bottom: 3.6rem;
     }
+    
+    &-text {
+        width: 100%;
 
-    &:checked {
+        margin-bottom: 3.6rem;
 
-        & + label {
-            font-weight: bold;
-        }
-
-        & + label:before {
-            transform: scale(0);
-        }
-
-        & + label:after {
-            transform: scale(1);
-            padding: 7px;
-            width: 10px;
-            height: 8px;
-            border: 1px solid $cl-form-grey;
-            border-radius: 4px;
-            background-color: $cl-white;
-            background-position: center;
-        }
-
-        &:disabled {
-            background: transparent;
-        }
-
-        &:disabled[type="checkbox"] + label:after {
-            background: svg-load('check.svg', fill=$cl-grey);
-        }
-
-        &:disabled[type="radio"] + label:after {
-            background: $cl-grey;
+        &>textarea {
+            height: 17.5rem;
         }
     }
 }
 
-input[type="checkbox"] + label {
-    &:before {
-        width: 16px;
-        height: 16px;
-        border-radius: 4px;
-        background-color: $cl-white;
-    }
-
-    &:after {
-        left: 0px;
-        top: 4px;
-        padding: 5px;
-        width: 11px;
-        height: 8px;
-        background: url('$img_path/svg/check.svg') no-repeat;
-    }
-}

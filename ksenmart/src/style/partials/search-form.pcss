@@ -7,28 +7,75 @@
         width: 35rem;
         margin: 0 auto;  
 
+        &_filter {
+            width: 100%;
+        }
+
         &input {
             font-family: 'Font-Awesome';
         }
 
         @media  (--tablet-lg) {
-            width: 29.4rem;
+            width: auto;
+        }
+
+        &>input[type="text"],
+        select {
+            border: 1px solid transparent;
+            background: #2D5A79;
+            color: #fff;
+            width: 100%;
+            height: 4rem;
+            font-size: 1.5rem;
+            line-height: 1.7rem;
+            padding: 0 11rem 0 1.7rem;
+            
+
+            &::placeholder {
+                color: #fff;
+            }
+
+            &:hover,
+            &.is-hover {
+                background-color: #306182;
+            }
+
+            &:focus,
+            &.is-focus {
+                background-color: #306182;
+                border-color: #6aa2c8;
+            }
+
+            &:active,
+            &.is-active {
+                background-color: #306182;
+                border-color: #6aa2c8;
+            }
         }
 
     }
 
-    &__input {
+    &__basket {
+        position: relative;
         width: 100%;
         height: 4rem;
-        font-size: 1.5rem;
-        line-height: 1.7rem;
-        padding:0 11rem 0 1.7rem;
-        border: none;
-        border-radius: 0.5rem;
-        outline: none;
+        font-size: 1.1rem;
+        &>input[type="text"] {
+            background: #fff;
+            height: 4rem;
+            font-size: 1.1rem;
 
-        box-shadow: inset 0px 0.1rem 0.4rem rgba(0, 0, 0, 0.2);
-        border-radius: 0.5rem;
+            padding-right: 11rem;
+            padding-left: 1rem;
+        }
+
+        &>button {
+            background: #4EB7F0;
+        }
+    }
+
+
+    &__input {
 
         transition: all .2s ease;
 
@@ -46,21 +93,41 @@
         }
 
         &_dark {
-            background: #2D5A79;
+            /* background: #2D5A79;
             color: #fff;
 
             &::placeholder {
                 color: #fff;
             }
 
-            &:hover {
-                background: #306182;
+            &:hover,
+            &.is-hover {
+                background-color: #306182;
             }
+
+            &:focus,
+            &.is-focus {
+                background-color: #306182;
+                border-color: #6aa2c8;
+            }
+
+            &:active,
+            &.is-active {
+                background-color: #306182;
+                border-color: #6aa2c8;
+            } */
         }
 
         &_region {
             padding-right: 1.7rem;
             margin-bottom: 2rem;
+        }
+
+        &_filter {
+            width: 25.3rem;
+
+            margin-bottom: 2rem;
+            padding: 0 1.7rem 0 1.7rem;
         }
 
         @media  (--mobile-sm) {

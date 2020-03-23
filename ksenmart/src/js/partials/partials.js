@@ -22,6 +22,13 @@
 @@include('banner-slider.js')
 @@include('sliders.js')
 @@include('expend.js')
+@@include('filter-slider.js')
+@@include('prod-description-slider.js')
+
+@@include('buttons.js')
+@@include('rating-star.js')
+@@include('ring-diagram.js')
+
 
 @@include('header_fixed.js')
 

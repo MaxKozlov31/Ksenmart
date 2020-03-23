@@ -1,8 +1,11 @@
 $(document).ready(function(){
     $('.product-slider').slick({
         dots: false,
+        
+        // кастомные точки(цифры) customPaging: (slider, i) => `<a>${i + 1}</a>`
+        // колонки rows:
         infinite: false,
-        speed: 300,
+        speed: 400,
         slidesToShow: 4,
         slidesToScroll: 4,
         prevArrow: '<button class="prev arrow"></button>',
@@ -48,6 +51,18 @@ $(document).ready(function(){
             // settings: "unslick"
             // instead of a settings object
         ]
+    });
+
+    $('.SOMEcategory-slider').slick({
+        rows: 2,
+        dots: true,
+        customPaging: (slider, i) => `<a>${i + 1}</a>`,
+        infinite: false,
+        arrows: false,
+        speed: 600,
+        slidesToShow: 3,
+        slidesToScroll: 3
+        
     });
 });
 
