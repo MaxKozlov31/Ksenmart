@@ -4,11 +4,27 @@
 
     margin-bottom: 8.5rem;
     
+    &-pct {
+        position: absolute;
+        
+
+        @media  (--mobile-sm) {
+            left: 60%;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 32.8rem;
+            height: 22rem;
+        }
+    }
 
     &-list {
         
         display: flex;
         justify-content: space-between;
+
+        @media  (--mobile-sm) {
+            margin: 0 -1.4rem;
+        }
     }
 
     &-block {
@@ -22,18 +38,45 @@
         &:hover {
             box-shadow: 0.1rem 0.4rem 0.5rem rgba(0, 0, 0, .18);
             transform: scale(1.05);
+
+            @media  (--mobile-sm) {
+                transform: none;
+            }
         }
         
 
+        @media  (--mobile-sm) {
+            width: 100%;
+            height: 25rem;
+            overflow: hidden;
+
+            margin-bottom: 3.4rem;
+        }
+
         &_1 {
-            background-image: url(../img/stock-1.jpg);
+            background: linear-gradient(180deg, #4EB7F0 0%, #4ED3F0 100%);
         }
 
         &_2 {
-            background-image: url(../img/stock-2.jpg);
+            background: linear-gradient(180deg, #FC7B54 0%, #FC9B54 100%);
+            margin: 0;
         }
 
 
+        &_mobile {
+            display: none;
+
+            @media  (--mobile-sm) {
+                display: block;
+                overflow: hidden;
+            }
+        }
+
+        &_display-none {
+            @media  (--mobile-sm) {
+                display: none;
+            }
+        }
     }
 
     &-content {
@@ -43,18 +86,32 @@
         left: 11.47%;
         transform: translate(0, -50%);
 
+        @media  (--mobile-sm) {
+            width: 100%;
+            left: 0;
+
+            padding: 0 1.3rem;
+        }
+
         &__date {
             font-size: 1.3rem;
             line-height: 1.7rem;
             letter-spacing: 0.07rem;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #B0E3FF;;
 
             margin-bottom: 1.8rem;
 
             &_orange {
                 color: #F8D15C;
             }
+
+            @media  (--mobile-sm) {
+                font-weight: bold;
+
+                margin-bottom: 1.3rem;
+            }
+            
         }
 
         &__text {
@@ -72,7 +129,15 @@
 
             margin-bottom: 1.8rem;
   
+            @media  (--mobile-sm) {
+                width: 57%;
+
+                margin-bottom: 2.3rem;
+            }  
         }
     }
 
+    @media  (--mobile-sm) {
+        margin: 0;
+    }
 }

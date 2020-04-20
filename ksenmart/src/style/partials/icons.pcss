@@ -54,6 +54,11 @@
     &__features {
         width: 6.2rem;
         height: 6.3rem;
+
+        @media (--mobile-sm) {
+            width: 4.8rem;
+            height: 4.9rem;
+        }
     }
 
     &__hot {
@@ -107,6 +112,20 @@
         border-radius: 5rem;
         background: #4EB7F0;
         color: #fff;
+
+        @media  (--mobile-sm) {
+            width: 2.6rem;
+            height: 2.6rem;
+            top:  .2rem;
+            right: .5rem;
+            font-size: 2rem;
+        }
+
+        &>span {
+            @media  (--mobile-sm) {
+                display: none;
+            }
+        }
     }
 
 

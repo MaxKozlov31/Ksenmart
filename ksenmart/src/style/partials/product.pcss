@@ -8,6 +8,10 @@
         
         margin-bottom: 3.2rem;
         margin: 0 auto;
+
+        @media  (--mobile-sm) {
+            margin: 0 -1.4rem;
+        }
     }
 
     &-block {
@@ -16,23 +20,30 @@
         height: 46.5rem;
         margin: 0 1rem 0.7rem 1rem;
         
+        @media  (--mobile-sm) {
+            height: auto;
+            width: 12.6rem;
+        }
     }
 
     &-items {
         
-        width: 29.5rem;
+        max-width: 29.5rem;
         height: 46.5rem;
-
-        padding: 2.2rem;
-
 
         border: .1rem solid transparent;
         border-radius: 1rem;
         transition: .2s;
+        
+        padding: 2.2rem;
 
         &:hover {
             border: .1rem solid #FC7B54;
             box-shadow: 0 0 1.4rem;
+
+            @media  (--mobile-sm) {
+                box-shadow: 0 0 0.8rem;
+            }
         }
 
         &__top {
@@ -47,6 +58,12 @@
             cursor: pointer;
             margin-bottom: 2rem;
 
+            @media  (--mobile-sm) {
+                width: auto;
+                height: auto;
+
+                margin-bottom: .9rem;
+            }
         }
 
         &__information {
@@ -61,8 +78,20 @@
 
                 margin-bottom: 0.8rem;
 
+                @media  (--mobile-sm) {
+                    margin-bottom: 0.5rem;
+                    font-size: 1.3rem;
+                    line-height: 1.7rem;
+                }
+
                 &_kit {
                     margin-bottom: 2.1rem;
+                }
+
+                &>span {
+                    @media  (--mobile-sm) {
+                        display: none;
+                    }
                 }
             }
 
@@ -74,6 +103,10 @@
                 color: #7C7C7C;
 
                 margin-bottom: 1.3rem;
+
+                @media  (--mobile-sm) {
+                    display: none;
+                }
             }
         }
 
@@ -83,6 +116,10 @@
             align-items: center;
 
             margin-bottom: 2.8rem;
+
+            @media  (--mobile-sm) {
+                margin-bottom: 1.7rem;
+            }
         }
 
         &__availability {
@@ -90,6 +127,21 @@
             font-size: 1.3rem;
             line-height: 1.7rem;
 
+            @media  (--mobile-sm) {
+                display: none;
+            }
+
+            &_mobile {
+                display: none;
+                color: #48B75A;
+                font-size: 1.1rem;
+
+                margin-bottom: .2rem;
+
+                @media  (--mobile-sm) {
+                    display: block;
+                }
+            }
         }
 
         &__old-price {
@@ -102,6 +154,10 @@
             color: #7C7C7C;
 
             margin-bottom: 0.3rem;
+
+            @media  (--mobile-sm) {
+                font-size: 1.3rem;
+            }
         }
 
         &__new-price {
@@ -112,6 +168,12 @@
             color: #16405D;
 
             margin-bottom: 1.3rem;
+
+            @media  (--mobile-sm) {
+                font-size: 1.5rem;
+                line-height: 1.9rem;
+                margin: 0;
+            }
 
             &_kit {
                 font-weight: bold;
@@ -138,6 +200,15 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @media  (--mobile-sm) {
+                display: none;
+            }
+        }
+
+        @media  (--mobile-sm) {
+            padding: 1.1rem;
+            height: auto;
         }
     }
 }

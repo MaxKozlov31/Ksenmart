@@ -5,19 +5,42 @@
 
     margin-bottom: 8.5rem;
 
+    @media (--mobile-sm) {
+        padding-top: 3.6rem;
+        padding-bottom: 1.8rem;
+        margin: 0;
+    }
+
     &-items {
         display: flex;
         justify-content: space-around;
 
+        @media (--mobile-sm) {
+            display: flex;
+            justify-content: space-between;
+            height: 24rem;
+            position: relative;
+            flex-wrap: nowrap;
+            overflow: scroll;
+        }
+
     }
 
     &-content {
+        width: 27.3rem;
 
+        @media (--mobile-sm) {
+            min-width: 16rem;
+        }
     }
 
     &__logo {
         
         margin-bottom: 3.2rem;
+
+        @media (--mobile-sm) {
+            margin-bottom: 3rem;
+        }
 
     }
 
@@ -28,6 +51,14 @@
         color: #333333;
 
         margin-bottom: 2rem;
+
+        @media (--mobile-sm) {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+
+            margin-bottom: .9rem;
+        }
+        
     }
 
     &__text {
@@ -35,6 +66,11 @@
         font-size: 1.5rem;
         line-height: 1.9rem;
         color: #7C7C7C;
+
+        @media (--mobile-sm) {
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+        }
     }   
 }
 

@@ -17,9 +17,46 @@
  !Плагин не понимает переменные в качестве значения ширины :(
 */
 
+ /* @custom-media --mobile-sm (max-width: 320px);
+@custom-media --mobile-sm-min (min-width: 320px);
+@custom-media --mobile-landscape (max-width: 479px) and (orientation: landscape);
+@custom-media --mobile-portrait (max-width: 479px) and (orientation: portrait);
+@custom-media --mobile (max-width: 479px);
+@custom-media --mobile-min (min-width: 480px);
+@custom-media --mobile-lg-landscape (max-width: 639px) and (orientation: landscape);
+@custom-media --mobile-lg-portrait (max-width: 639px) and (orientation: portrait);
+@custom-media --mobile-lg (max-width: 639px);
+@custom-media --mobile-lg-min (min-width: 640px);
+@custom-media --tablet-landscape (max-width: 767px) and (orientation: landscape);
+@custom-media --tablet-portrait (max-width: 767px) and (orientation: portrait);
+@custom-media --tablet (max-width: 767px);
+@custom-media --tablet-min (min-width: 768px);
+@custom-media --tablet-lg-landscape (max-width: 1023px) and (orientation: landscape);
+@custom-media --tablet-lg-portrait (max-width: 1023px) and (orientation: portrait);
+@custom-media --tablet-lg (max-width: 1023px);
+@custom-media --tablet-lg-min (min-width: 1024px);
+@custom-media --desktop-portrait (max-width: 1279px) and (orientation: portrait);
+@custom-media --desktop (max-width: 1279px);
+@custom-media --desktop-min (min-width: 1280px);
+@custom-media --desktop-lg (max-width: 1599px);
+@custom-media --desktop-lg-min (min-width: 1600px);
+@custom-media --desktop-xl (max-width: 1909px);
+@custom-media --desktop-xl-min (min-width: 1910px); */
+
  /* Мои точки, не уверен, что нужны */
 
  /* "and (orientation: landscape)" не работала: */
+
+ /* my point */
+
+ /* $screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px; */
 
  /* Переменные */
 

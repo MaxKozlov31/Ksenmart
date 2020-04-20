@@ -30,7 +30,7 @@ $desktop-xl-size-min: 1910px;
  Пример использования: @media (--mobile) {}
  !Плагин не понимает переменные в качестве значения ширины :(
 */
-@custom-media --mobile-sm (max-width: 320px);
+/* @custom-media --mobile-sm (max-width: 320px);
 @custom-media --mobile-sm-min (min-width: 320px);
 @custom-media --mobile-landscape (max-width: 479px) and (orientation: landscape);
 @custom-media --mobile-portrait (max-width: 479px) and (orientation: portrait);
@@ -54,7 +54,7 @@ $desktop-xl-size-min: 1910px;
 @custom-media --desktop-lg (max-width: 1599px);
 @custom-media --desktop-lg-min (min-width: 1600px);
 @custom-media --desktop-xl (max-width: 1909px);
-@custom-media --desktop-xl-min (min-width: 1910px);
+@custom-media --desktop-xl-min (min-width: 1910px); */
 
 /* Мои точки, не уверен, что нужны */
 @custom-media --desktop-custom-md (max-width: 1439px); 
@@ -63,3 +63,22 @@ $desktop-xl-size-min: 1910px;
 @custom-media --tablet--custom-landscape (max-width: 1376px);
 
 
+/* my point */
+
+@custom-media --mobile-sm (max-width: 576px);
+@custom-media --mobile-sm-max (max-width: 767px);
+@custom-media --mobile-md (max-width: 768px);
+@custom-media --mobile-md-max (max-width: 991px);
+@custom-media --mobile-lg (max-width: 992px);
+@custom-media --mobile-lg-max (max-width: 1199px);
+@custom-media --mobile-xl (max-width: 1200px);
+@custom-media --mobile-xl-min (min-width: 1200px);
+
+/* $screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px; */

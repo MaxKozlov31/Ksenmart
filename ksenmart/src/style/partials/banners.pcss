@@ -6,19 +6,23 @@
 
     margin: 0 auto;
 
-    @media (--desktop-custom-md) {
+    @media  (--mobile-sm) {
+        padding-top: 12.1rem;
+    }
+
+    /* @media (--desktop-custom-md) {
         max-width: 110rem;
     }
 
     @media (--desktop) {
         max-width: 80rem;
-    }
+    } */
 
-    @media (--mobile-sm) {
+    /* @media (--mobile-sm) {
         margin-top: 12.1rem;
         margin-bottom: 6.9rem;
         padding: 0;
-    }
+    } */
     
     &-slider {
         position: relative;
@@ -26,9 +30,13 @@
         height: 38.3rem;
         margin: 0 auto;
 
-        @media (--mobile-sm) {
-            height: 25.1rem;
+        @media  (--mobile-sm) {
+            height: 25rem;
         }
+
+        /* @media (--mobile-sm) {
+            height: 25.1rem;
+        } */
 
         /* @media (--desktop) {
             max-width: 108rem;
@@ -44,8 +52,12 @@
         max-width: 124rem;
         height: 38.3rem;
         margin: 0 auto;
-        background-image: url(../img/banner1.jpg);
+        /* background-image: url(../img/banner1.jpg); */
+        background: linear-gradient(180deg, #4EB7F0 0%, #4ED3F0 100%);
 
+        @media  (--mobile-sm) {
+            height: 25rem;
+        }
     }
 
     &-content {
@@ -54,13 +66,35 @@
         left: 50%;
         transform: translate(0, -50%);
 
-        @media (--tablet-lg) {
+        @media  (--mobile-sm) {
+            left: 1.3rem;
+        }
+
+        /* @media (--tablet-lg) {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 0 1.3rem;
-        }
+        } */
 
+
+
+        &__pict {
+            position: absolute;
+            
+
+            @media  (--mobile-sm) {
+                width: 16rem;
+                height: 22rem;
+                right: -2.5rem;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+
+            @media  (--mobile-xl-min) {
+                left: 16.3%;
+            }
+        }
 
         &-stock {
             display: flex;
@@ -80,9 +114,7 @@
                 @media (--mobile-sm) {
                     text-transform: lowercase;
                     color: #B0E3FF;
-
-                    margin: 0 0 1.3rem 0 ; 
-
+                    margin: 0;
                 }
             }
 
@@ -100,7 +132,7 @@
                 width: 177px;
                 font-size: 2.3rem;
                 line-height: 3rem;
-                margin: 0 0 2.3rem 0;
+                margin: 1.3rem 0 2.3rem 0;
             }
         }
     }
@@ -115,7 +147,12 @@
 .slick-track {
     height: 100%;
 
-    padding: 1rem 0;
+
+    @media  (--mobile-sm) {
+        height: 25rem;
+
+        /* padding: .2rem .5rem; */
+    }
 }
 
 .arrow {

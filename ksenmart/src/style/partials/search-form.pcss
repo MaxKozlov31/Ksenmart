@@ -4,8 +4,12 @@
       
     &__content {
         position: relative;
-        width: 35rem;
+        /* width: 35rem; */
         margin: 0 auto;  
+
+        @media  (--mobile-sm) {
+            width: 100%;
+        }
 
         &_filter {
             width: 100%;
@@ -139,9 +143,11 @@
 
     &_indent {
         margin-left: 1.4rem;
+        
 
         @media  (--mobile-sm) {
             margin: 0 auto;
+            width: 100%;
         }
     }
 
@@ -168,7 +174,7 @@
         }
 
         
-        @media  (--tablet-lg) {
+        @media  (--mobile-sm) {
             display: none;
         }
     }
