@@ -86,6 +86,10 @@
 
                 &_kit {
                     margin-bottom: 2.1rem;
+
+                    @media  (--mobile-sm) {
+                        margin-bottom: .3rem;
+                    }
                 }
 
                 &>span {
@@ -108,6 +112,12 @@
                     display: none;
                 }
             }
+
+            &_kit {
+                @media  (--mobile-sm-min) {
+                    display: none;
+                }
+            }
         }
 
         &__status {
@@ -119,6 +129,12 @@
 
             @media  (--mobile-sm) {
                 margin-bottom: 1.7rem;
+            }
+
+            &_kit {
+                @media  (--mobile-sm-min) {
+                    display: none;
+                } 
             }
         }
 
@@ -144,6 +160,16 @@
             }
         }
 
+        &__price {
+            display: flex;
+            justify-content: space-between;
+            width: 84%;
+
+            @media  (--mobile-sm) {
+                flex-direction: column;
+            }
+        }
+
         &__old-price {
             font-style: normal;
             font-weight: normal;
@@ -157,6 +183,23 @@
 
             @media  (--mobile-sm) {
                 font-size: 1.3rem;
+            }
+
+            &_kit {
+                text-decoration: line-through;
+                color: #FF002E;
+                font-size: 1.4rem;
+                line-height: 4rem;
+                letter-spacing: 0.07em;
+                font-weight: normal;
+                text-transform: uppercase;
+                vertical-align: middle;
+
+                @media  (--mobile-sm) {
+                    order: -1;
+                    line-height: 1.7rem;
+                }
+                
             }
         }
 
@@ -179,14 +222,7 @@
                 font-weight: bold;
 
                 &>span {
-                    text-decoration: line-through;
-                    color: #FF002E;
-                    font-size: 1.4rem;
-                    line-height: 1.8rem;
-                    letter-spacing: 0.07em;
-                    font-weight: normal;
-                    text-transform: uppercase;
-                    vertical-align: middle;
+                    
                 }
 
                 &-saving {
@@ -203,6 +239,12 @@
 
             @media  (--mobile-sm) {
                 display: none;
+            }
+
+            &_kit {
+                @media  (--mobile-sm) {
+                    display: flex;
+                }
             }
         }
 

@@ -73,6 +73,14 @@
             position: absolute;
             top: 1rem;
             left: 1rem;
+            z-index: 1;
+
+            @media (--mobile-sm) {
+                display: block;
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+            
         }
     }
 
@@ -223,5 +231,15 @@
     transition: .2s all;
     &:hover {
         color: red;
+    }
+}
+
+.fa-clock {
+    margin-right: .4rem;
+}
+
+.fa {
+    &-clock, &-comment, &-eye {
+        margin-right: .4rem;
     }
 }

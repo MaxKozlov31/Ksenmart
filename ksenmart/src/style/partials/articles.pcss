@@ -2,12 +2,25 @@
     width: 100%;
 
     margin-bottom: 9.5rem;
+
+    @media (--mobile-sm) {
+        margin: 0;
+    }
     
     &-list {
         display: flex;
         justify-content: space-between;
 
         margin-bottom: 3.6rem;
+
+        @media (--mobile-sm) {
+            flex-wrap: nowrap;
+            overflow: scroll;
+            
+            margin: 0 -1.4rem 3.6rem -1.4rem;
+            padding: 0 1.4rem;
+        }
+        
     }
 
     &-block {
@@ -25,6 +38,16 @@
             transform: scale(1.05);
         }
         
+        @media (--mobile-sm) {
+            width: auto;
+            height: 19.2rem; 
+        }
+
+        &:not(:last-child) {
+            @media (--mobile-sm) {
+                margin-right: 1.9rem;
+            }
+        }
 
         &_1 {
             background-image: linear-gradient(to top, rgba(0, 0, 0, 0.64), transparent 100%), url(../img/article-1.jpg);
@@ -40,8 +63,13 @@
     &-content {
         width: 100%;
         
-
         padding: 3.8rem;
+
+        @media (--mobile-sm) {
+            width: 20.6rem;
+
+            padding: 1.8rem;
+        }
 
         &__title{
             font-weight: bold;
@@ -51,22 +79,56 @@
             color: #FFFFFF;
 
             margin-bottom: 2.1rem;
+
+            @media (--mobile-sm) {
+                font-size: 1.1rem;
+                line-height: 1.4rem;
+            }
         }
 
         &__information {
             display: flex;
             justify-content: space-between;
+            font-size: 1.5rem;
+            line-height: 1.9rem;
+
+
+            @media (--mobile-sm) {
+                font-size: 1.1rem;
+                line-height: 1.4rem;
+            }
         }
 
         &__date {
-            font-size: 1.5rem;
-            line-height: 1.9rem;
-            
             color: #B5B5B5;
+
+            &_desktop {
+                @media (--mobile-sm) {
+                    display: none;
+                }
+            }
+
+            &_mobile {
+                @media (--mobile-sm-min) {
+                    display: none;
+                }
+            }
+        }
+
+        &__state {
+            
         }
 
         &__comments {
             margin-right: 3.7rem;
+
+            @media (--mobile-sm) {
+                display: none;
+            }
+        }
+
+        &__views {
+
         }
         
     }
