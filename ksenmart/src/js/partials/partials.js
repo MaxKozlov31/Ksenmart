@@ -25,6 +25,7 @@
 @@include('filter-slider.js')
 @@include('prod-description-slider.js')
 
+@@include('footer_add-class.js')
 @@include('buttons.js')
 @@include('rating-star.js')
 @@include('ring-diagram.js')
