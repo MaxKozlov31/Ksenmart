@@ -88,11 +88,25 @@ button {
         font-size: 1.3rem;
         line-height: 130%;
 
+        @media (--desktop-custom-md) {
+            width: 18rem;
+        }
+
+        @media  (--desktop) {
+            width: 17rem;
+        }
+
         @media (--mobile-sm) {
             width: 7.8rem;
             height: 2.8rem;
             font-size: 1.1rem;
         }
+
+        /* @media (--mobile-sm-min) {
+            width: 15rem;
+            height: 3.5rem;
+            font-size: 1.3rem;
+        } */
     }
 
     &-AddToCart {
@@ -129,8 +143,11 @@ button {
         margin: 2.1rem 0 0 6.7rem;
 
         @media (--mobile-sm) {
+            width: 100%;
             text-transform: inherit;
+            
             margin: 0 auto;
+            
         }
     }
 
@@ -145,6 +162,10 @@ button {
             width: 100%;
             height: 5.1rem;
         }
+
+        /* @media (--mobile-sm-min) {
+            width: 50%;
+        } */
     }
 
     &-respond {
@@ -233,14 +254,6 @@ button {
         width: 12rem;
     }
 
-    @media (--tablet-lg) {
-        padding: 5px;
-        width: 7rem;
-        display: flex;
-        flex-direction: column;
-        text-transform: inherit;
-    }
-
     @media   (--mobile-sm) {
         display: none;
     }
@@ -312,9 +325,12 @@ button {
     }
 
     &__liked {
-        @media   (--tablet-lg) {
-            display: none;   
+        display: block;
+
+        @media (--mobile-lg-size) {
+            display: none;
         }
+
     }
 
     &__basket {
@@ -331,7 +347,7 @@ button {
     color: #7C7C7C;
     text-transform: uppercase;
 
-    @media (--mobile-sm) {
+    @media (--mobile-md-max) {
         display: none;
     }
 }

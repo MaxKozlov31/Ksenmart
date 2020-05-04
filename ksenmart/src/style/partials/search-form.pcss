@@ -4,12 +4,23 @@
       
     &__content {
         position: relative;
-        /* width: 35rem; */
+        width: 35rem;
         margin: 0 auto;  
 
+        @media  (--mobile-md) {
+            width: 25rem;
+        }
+        
         @media  (--mobile-sm) {
             width: 100%;
         }
+
+        
+
+        /* @media  (--mobile-sm-min) {
+            width: 65%;
+            margin: 0;
+        } */
 
         &_filter {
             width: 100%;
@@ -19,9 +30,9 @@
             font-family: 'Font-Awesome';
         }
 
-        @media  (--tablet-lg) {
+        /* @media  (--tablet-lg) {
             width: auto;
-        }
+        } */
 
         &>input[type="text"],
         select {
@@ -147,8 +158,17 @@
 
         @media  (--mobile-sm) {
             margin: 0 auto;
-            width: 100%;
         }
+
+        @media  (--mobile-sm) {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+
     }
 
     &__btn {

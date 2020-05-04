@@ -9,7 +9,27 @@
         margin-bottom: 3.2rem;
         margin: 0 auto;
 
-        @media  (--mobile-sm) {
+        @media  (--desktop-custom-md) {
+            max-width: 110rem;
+        }
+
+        @media  (--desktop) {
+            max-width: 100rem;
+        }
+
+        @media  (--tablet-xl) {
+            max-width: 85rem;
+        }
+
+        @media  (--mobile-lg) {
+            max-width: 80rem;
+        }
+
+        @media  (--mobile-md-max) {
+            max-width: 100%;
+        }
+
+        @media  (--mobile-md-max) {
             margin: 0 -1.4rem;
         }
     }
@@ -17,19 +37,24 @@
     &-block {
         position: relative;
         width: 29.5rem;
-        height: 46.5rem;
+        
         margin: 0 1rem 0.7rem 1rem;
         
         @media  (--mobile-sm) {
-            height: auto;
+            
             width: 12.6rem;
+        }
+
+        @media  (--mobile-sm-min) {
+            
+            width: auto;
         }
     }
 
     &-items {
         
         max-width: 29.5rem;
-        height: 46.5rem;
+        
 
         border: .1rem solid transparent;
         border-radius: 1rem;
@@ -46,19 +71,37 @@
             }
         }
 
+        @media  (--mobile-md-max) {
+            max-width: 23.5rem;
+        }
+
+        @media  (--desktop) {
+            padding: 1.3rem;
+        }
+
+        @media  (--mobile-sm) {
+            padding: 1.1rem;
+            
+        }
+
+        /* @media (--mobile-sm-min) {
+            max-width: 22rem;
+            padding: 1.5rem;
+        } */
+
         &__top {
             position: relative;
         }
 
         &__img {
             position: relative;
-            width: 24.3rem;
-            height: 15.5rem;
+            /* max-width: 24.3rem;
+            max-height: 15.5rem; */
             margin: 0 auto;
             cursor: pointer;
             margin-bottom: 2rem;
 
-            @media  (--mobile-sm) {
+            @media  (--mobile-md) {
                 width: auto;
                 height: auto;
 
@@ -165,7 +208,7 @@
             justify-content: space-between;
             width: 84%;
 
-            @media  (--mobile-sm) {
+            @media  (--mobile-md-max) {
                 flex-direction: column;
             }
         }
@@ -195,7 +238,7 @@
                 text-transform: uppercase;
                 vertical-align: middle;
 
-                @media  (--mobile-sm) {
+                @media  (--mobile-md-max) {
                     order: -1;
                     line-height: 1.7rem;
                 }
@@ -248,10 +291,7 @@
             }
         }
 
-        @media  (--mobile-sm) {
-            padding: 1.1rem;
-            height: auto;
-        }
+        
     }
 }
 

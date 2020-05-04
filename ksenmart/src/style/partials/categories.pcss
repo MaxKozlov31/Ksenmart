@@ -22,13 +22,14 @@
 
         padding: 0 4.4rem;
 
-        @media (--mobile-sm) {
+        @media (--mobile-md-max) {
             flex-wrap: nowrap;
             overflow: scroll;
             padding: 0;
 
             margin: 0 -1.4rem;
             padding-left: 2.9rem;
+            padding-bottom: 1rem;
         }
     }
 
@@ -39,10 +40,32 @@
         margin-bottom: 6rem;
 
         @media (--mobile-sm) {
-            width: auto;
+
             margin-right: 4rem;
             margin-bottom: .5rem;
         }
+
+        /* @media (--mobile-sm-min) {
+            
+
+            margin-right: 4rem;
+            margin-bottom: .5rem;
+        } */
+
+        @media (--mobile-md-max) {
+            width: auto;
+
+            margin-right: 4rem;
+            margin-bottom: .5rem;
+        }
+
+        /* @media (--mobile-md-min) {
+            width: 20%;
+            margin-right: 4rem;
+            margin-bottom: 6rem;
+        } */
+
+
     }
 
     &-circle {

@@ -10,9 +10,7 @@
         padding-top: 12.1rem;
     }
 
-    /* @media (--desktop-custom-md) {
-        max-width: 110rem;
-    }
+    /* 
 
     @media (--desktop) {
         max-width: 80rem;
@@ -29,6 +27,18 @@
         max-width: 124rem;
         height: 38.3rem;
         margin: 0 auto;
+
+        @media (--desktop-custom-md) {
+            max-width: 110rem;
+        }
+
+        @media (--desktop) {
+            max-width: 100rem;
+        }
+
+        @media  (--tablet-xl) {
+            max-width: 85rem;
+        }
 
         @media  (--mobile-sm) {
             height: 25rem;
@@ -55,6 +65,10 @@
         /* background-image: url(../img/banner1.jpg); */
         background: linear-gradient(180deg, #4EB7F0 0%, #4ED3F0 100%);
 
+        /* margin-right: .5rem;
+        margin-left: .5rem; */
+
+
         @media  (--mobile-sm) {
             height: 25rem;
         }
@@ -67,8 +81,17 @@
         transform: translate(0, -50%);
 
         @media  (--mobile-sm) {
-            left: 1.3rem;
+            width: 100%;
+
+            padding: 0 1.3rem;
         }
+
+        @media  (--mobile-md) {
+            width: 100%;
+            left: 0;
+
+        }
+
 
         /* @media (--tablet-lg) {
             top: 50%;
@@ -91,9 +114,12 @@
                 transform: translate(0, -50%);
             }
 
-            @media  (--mobile-xl-min) {
-                left: 16.3%;
+            @media  (--mobile-md) {
+                left: 65%;
+                top: 50%;
+                transform: translate(0, -50%);
             }
+
         }
 
         &-stock {

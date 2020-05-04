@@ -35,6 +35,7 @@
     
             &>ul {
                 padding: 0;
+                width: fit-content;
             }
     
             @media (--mobile-sm) {
@@ -76,6 +77,7 @@
             @media (--mobile-sm) {
                 flex-direction: column;
                 justify-content: space-around;
+                align-items: end;
             }
         }
 
@@ -112,6 +114,10 @@
 
         padding: 1.4rem;
 
+        @media (--mobile-sm) {
+            padding: 1rem;
+        }
+
         &__title {
             font-size: 2.3rem;
             line-height: 3rem;
@@ -145,6 +151,10 @@
 
             &:not(:last-child) {
                 margin-bottom: 1.4rem;
+
+                @media (--mobile-sm) {
+                    margin-bottom: .8rem;
+                }
             }
             
         }
@@ -153,13 +163,15 @@
 
     &-contacts {
         -ms-grid-column: 5;
-        
-        
 
+        &_mobile {
+            width: fit-content;
+        }
+        
     }
 
     &-address {
-        
+        margin-bottom: 5rem;
     }
 
     &-tel {
@@ -174,7 +186,15 @@
     }
 
     &-socs {
-        
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        margin-top: 5rem;
+
+        &_mobile {
+            margin-top: 3rem;
+        }
     }
 
     &-shops {
@@ -232,4 +252,26 @@
 
 .footer-content {
     display: block;
+}
+
+.soc-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    border: 2px solid #2D536D;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+
+    transition: .2s linear;
+
+    &:hover {
+        background: #2D536D;
+
+        & .icon-soc {
+            transform: scale(1.2);
+        }
+    }
 }
