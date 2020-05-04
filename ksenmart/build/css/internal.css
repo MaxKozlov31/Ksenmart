@@ -1028,7 +1028,16 @@ select {
 }@media (max-width: 991px) {.btn_expend {
         display: none
 }
-    }.modal__close {
+    }.btn_expend-articles {
+        display: block;
+        margin: 0 auto
+    }@media (max-width: 576px) {
+
+    .btn_expend-articles {
+            display: none
+    }
+            
+        }.modal__close {
     position: absolute;
     top: 2.2rem;
     right: 2.2rem;
@@ -1354,7 +1363,7 @@ h6 {
     }@media  (max-width: 768px) {
       
     .search-form__content {
-            width: 25rem
+            width: auto
 
     }
         }@media  (max-width: 576px) {
@@ -1689,12 +1698,18 @@ h6 {
     .banners-slider {
             max-width: 85rem
     }
+        }@media  (max-width: 1023px) {
+    
+    .banners-slider {
+            max-width: 100%
+    }
         }@media  (max-width: 576px) {
     
     .banners-slider {
             height: 25rem
     }
         }.banners-slider {
+        
 
         /* @media (--mobile-sm) {
             height: 25.1rem;
@@ -2270,7 +2285,6 @@ h6 {
 
         transition: .1s linear
 
-
     }.articles-block:hover {
             box-shadow: 0.1rem 0.4rem 0.5rem rgba(0, 0, 0, .18);
             transform: scale(1.05);
@@ -2279,7 +2293,6 @@ h6 {
     .articles-block {
             width: auto;
             height: 19.2rem
-
 
     } 
         }@media (max-width: 768px) {
@@ -2291,7 +2304,28 @@ h6 {
             background-image: linear-gradient(to top, rgba(0, 0, 0, .64), transparent 100%), url(../img/article-1.jpg);
         }.articles-block_2 {
             background-image: linear-gradient(to top, rgba(0, 0, 0, .64), transparent 100%), url(../img/article-2.jpg);
-        }.articles-content {
+        }.articles-block_3 {
+            display: none;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, .64), transparent 100%), url(../img/article-1.jpg)
+        }@media (max-width: 576px) {
+
+
+        .articles-block_3 {
+                display: flex;
+                width: auto;
+                height: 19.2rem
+        } 
+            }.articles-block_4 {
+            display: none;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, .64), transparent 100%), url(../img/article-2.jpg)
+        }@media (max-width: 576px) {
+
+        .articles-block_4 {
+                display: flex;
+                width: auto;
+                height: 19.2rem
+        } 
+            }.articles-content {
         width: 100%;
         
         padding: 3.8rem
@@ -3593,6 +3627,7 @@ h6 {
         }.product-block {
         position: relative;
         width: 29.5rem;
+        cursor: pointer;
         
         margin: 0 1rem 0.7rem 1rem
     }@media  (max-width: 576px) {
